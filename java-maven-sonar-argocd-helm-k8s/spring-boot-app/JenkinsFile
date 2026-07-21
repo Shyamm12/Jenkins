@@ -54,6 +54,13 @@ pipeline {
         steps {
             withCredentials([string(credentialsId: 'github', variable: 'GITHUB_TOKEN')]) {
                 sh '''
+                      pwd
+                      ls -la
+
+                      cd java-maven-sonar-argocd-helm-k8s/spring-boot-app
+
+                      pwd
+                     ls -la
                     git config user.email "shyamcena1999@gmail.com"
                     git config user.name "Shyamm12"
                     BUILD_NUMBER=${BUILD_NUMBER}
